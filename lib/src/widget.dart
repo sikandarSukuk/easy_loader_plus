@@ -1,13 +1,13 @@
-part of easy_loader_plus;
+part of '../easy_loader_plus.dart';
 
 class EasyLoaderWidget extends StatefulWidget {
   const EasyLoaderWidget({Key? key}) : super(key: key);
 
   @override
-  _EasyLoaderWidgetState createState() => _EasyLoaderWidgetState();
+  EasyLoaderWidgetState createState() => EasyLoaderWidgetState();
 }
 
-class _EasyLoaderWidgetState extends State<EasyLoaderWidget>
+class EasyLoaderWidgetState extends State<EasyLoaderWidget>
     with TickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _animation;

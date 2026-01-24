@@ -1,5 +1,3 @@
-library easy_loader_plus;
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';

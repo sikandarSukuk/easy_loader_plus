@@ -20,4 +20,5 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/promo.png
+    - assets/image-1.png
+    - assets/image-2.png

@@ -1,4 +1,4 @@
-part of easy_loader_plus;
+part of '../easy_loader_plus.dart';
 
 class EasyLoaderController extends ValueNotifier<EasyLoaderValue> {
   EasyLoaderController() : super(EasyLoaderValue.hidden());

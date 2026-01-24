@@ -1,1 +1,1 @@
-part of easy_loader_plus;
+part of '../easy_loader_plus.dart';
