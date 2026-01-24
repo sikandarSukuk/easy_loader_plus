@@ -1,6 +1,6 @@
 name: easy_loader_plus
 description: A modern, interactive, and progress-aware loading indicator for Flutter, designed as a spiritual successor to flutter_easyloading.
-version: 0.0.3
+version: 0.0.4
 homepage: https://github.com/Arpit980jai/easy_loader_plus
 repository: https://github.com/Arpit980jai/easy_loader_plus
 issue_tracker: https://github.com/Arpit980jai/easy_loader_plus/issues

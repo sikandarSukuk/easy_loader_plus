@@ -2,7 +2,11 @@
 
 A modern, interactive, and progress-aware loading indicator for Flutter. A spiritual successor to `flutter_easyloading`, built from the ground up with a focus on smooth animations and a delightful user experience.
 
-![Easy Loader Plus Showcase](assets/promo.png)
+## Preview
+
+| Loading | Success |
+| --- | --- |
+| ![Loading Animation](assets/image-1.png) | ![Success State](assets/image-2.png) |
 
 ## Features
 
@@ -18,7 +22,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  easy_loader_plus: ^0.0.3 # Replace with the latest version
+  easy_loader_plus: ^0.0.4 # Replace with the latest version
 ```
 
 ## Usage

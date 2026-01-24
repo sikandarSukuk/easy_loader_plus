@@ -1,3 +1,7 @@
+## 0.0.4
+
+* Corrected image links and asset paths in `README.md` and documentation.
+
 ## 0.0.3
 
 * Updated promotional image and assets.
