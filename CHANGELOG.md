@@ -1,3 +1,7 @@
+## 0.0.2
+
+* Updated `README.md` with improved image integration and layout.
+
 ## 0.0.1
 
 * Initial release of the `easy_loader_plus` package.
