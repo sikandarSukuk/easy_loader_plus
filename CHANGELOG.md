@@ -1,3 +1,7 @@
+## 0.0.3
+
+* Updated promotional image and assets.
+
 ## 0.0.2
 
 * Updated `README.md` with improved image integration and layout.
