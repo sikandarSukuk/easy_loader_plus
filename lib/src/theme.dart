@@ -23,9 +23,20 @@ class EasyLoaderTheme {
     textStyle: TextStyle(color: Colors.white),
   );
 
+  /// Spinner-only look: no panel behind the indicator.
+  static EasyLoaderTheme custom(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return EasyLoaderTheme(
+      backgroundColor: Colors.transparent,
+      textStyle: TextStyle(
+        color: isDark ? Colors.white : Colors.black87,
+      ),
+    );
+  }
+
   static EasyLoaderTheme of(BuildContext context, EasyLoaderStyle? style) {
     if (style == EasyLoaderStyle.custom) {
-      return EasyLoaderTheme.light; // Replace with custom theme
+      return custom(context);
     } else if (style == EasyLoaderStyle.dark) {
       return EasyLoaderTheme.dark;
     } else {
