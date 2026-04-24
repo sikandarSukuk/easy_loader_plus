@@ -1,7 +1,7 @@
 part of '../easy_loader_plus.dart';
 
 class EasyLoaderWidget extends StatefulWidget {
-  const EasyLoaderWidget({Key? key}) : super(key: key);
+  const EasyLoaderWidget({super.key});
 
   @override
   EasyLoaderWidgetState createState() => EasyLoaderWidgetState();
@@ -57,15 +57,20 @@ class EasyLoaderWidgetState extends State<EasyLoaderWidget>
     }
   }
 
+  bool get _isCustom => _value?.style == EasyLoaderStyle.custom;
+
   @override
   Widget build(BuildContext context) {
     return _value?.isShow == true
         ? Stack(
             children: [
               GestureDetector(
+                behavior: HitTestBehavior.opaque,
                 onTap: _value?.dismissOnTap == true ? EasyLoader.dismiss : null,
                 child: Container(
-                  color: Colors.black.withOpacity(0.5),
+                  color: _isCustom
+                      ? Colors.transparent
+                      : Colors.black.withOpacity(0.5),
                 ),
               ),
               Center(
@@ -84,21 +89,25 @@ class EasyLoaderWidgetState extends State<EasyLoaderWidget>
 
   Widget _buildLoader() {
     final theme = EasyLoaderTheme.of(context, _value?.style);
+    final hasStatus = _value?.status != null;
+
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: _isCustom
+          ? EdgeInsets.zero
+          : const EdgeInsets.all(20),
       decoration: BoxDecoration(
         color: theme.backgroundColor,
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(_isCustom ? 0 : 10),
       ),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           if (_value?.indicator != null)
             Padding(
-              padding: const EdgeInsets.only(bottom: 10),
+              padding: EdgeInsets.only(bottom: hasStatus ? 10 : 0),
               child: _value!.indicator,
             ),
-          if (_value?.status != null)
+          if (hasStatus)
             Text(
               _value!.status!,
               style: theme.textStyle,
